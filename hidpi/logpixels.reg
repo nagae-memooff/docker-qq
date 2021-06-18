@@ -1,4 +1,5 @@
 REGEDIT4
 
 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Hardware Profiles\Current\Software\Fonts]
+; "LogPixels"=dword:00000090
 "LogPixels"=dword:00000060

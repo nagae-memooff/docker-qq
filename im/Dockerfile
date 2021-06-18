@@ -1,9 +1,10 @@
 FROM bestwu/wine:i386
 LABEL maintainer='Peter Wu <piterwu@outlook.com>'
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends procps deepin.com.qq.im && \
-    apt-get -y autoremove --purge && apt-get autoclean -y && apt-get clean -y && \
+ADD im/deepin.com.qq.im_9.1.8deepin0_i386.deb /
+
+RUN dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb && \
+    rm deepin.com.qq.im_9.1.8deepin0_i386.deb && \
     find /var/lib/apt/lists -type f -delete && \
     find /var/cache -type f -delete && \
     find /var/log -type f -delete && \
