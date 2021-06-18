@@ -1,5 +1,4 @@
 FROM bestwu/wine:i386
-LABEL maintainer='Peter Wu <piterwu@outlook.com>'
 
 ADD im/deepin.com.qq.im_9.1.8deepin0_i386.deb /
 
