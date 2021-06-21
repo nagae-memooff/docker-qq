@@ -1,9 +1,13 @@
 FROM bestwu/wine:i386
 
 ADD im/deepin.com.qq.im_9.1.8deepin0_i386.deb /
+ADD im/sources.list /etc/apt/sources.list
 
-RUN dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends procps && \
+    dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb && \
     rm deepin.com.qq.im_9.1.8deepin0_i386.deb && \
+    apt-get -y autoremove --purge && apt-get autoclean -y && apt-get clean -y && \
     find /var/lib/apt/lists -type f -delete && \
     find /var/cache -type f -delete && \
     find /var/log -type f -delete && \
