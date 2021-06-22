@@ -4,7 +4,7 @@ ADD im/deepin.com.qq.im_9.1.8deepin0_i386.deb /
 ADD im/sources.list /etc/apt/sources.list
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends procps && \
+    apt-get install -y --no-install-recommends procps firefox-esr && \
     dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb && \
     rm deepin.com.qq.im_9.1.8deepin0_i386.deb && \
     apt-get -y autoremove --purge && apt-get autoclean -y && apt-get clean -y && \
@@ -13,6 +13,8 @@ RUN apt-get update && \
     find /var/log -type f -delete && \
     find /usr/share/doc -type f -delete && \
     find /usr/share/man -type f -delete
+#    dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb && \
+#    rm deepin.com.qq.im_9.1.8deepin0_i386.deb && \
 
 ENV APP=QQ \
     AUDIO_GID=63 \

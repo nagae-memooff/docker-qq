@@ -1,1 +1,2 @@
-deb [by-hash=force] http://mirrors.aliyun.com/deepin apricot main contrib non-free
+deb [by-hash=force] http://packages.deepin.com/deepin/ apricot main contrib non-free
+# deb [by-hash=force] http://community-store-packages.deepin.com/appstore/ eagle appstore
