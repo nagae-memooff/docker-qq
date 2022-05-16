@@ -17,4 +17,4 @@ docker run -d --name qq \
 -e XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR} \
 -e GID=`id -g` \
 -e UID=`id -u` \
-nagae-memooff/qq:9.1.8
+nagae-memooff/qq:9.6.0
