@@ -4,6 +4,7 @@ docker run -d --name qq \
 --device /dev/snd \
 --ipc=host \
 -v "/home/nagae-memooff/文档/Tencent Files":/TencentFiles \
+-v "/home/nagae-memooff/下载":/home/qq/Downloads \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
 -e XMODIFIERS=@im=ibus \
